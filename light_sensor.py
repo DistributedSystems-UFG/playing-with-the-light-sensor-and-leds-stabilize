@@ -36,13 +36,13 @@ try:
     while True:
         light_level = rc_time(pin_to_circuit)
         #print(rc_time(pin_to_circuit))
-        if light_level < 20:
+        if light_level > 250:
             print (light_level)
-            GPIO.output(16,GPIO.HIGH)
-            GPIO.output(18,GPIO.LOW)
-        else:
             GPIO.output(18,GPIO.HIGH)
             GPIO.output(16,GPIO.LOW)
+        else:
+            GPIO.output(16,GPIO.HIGH)
+            GPIO.output(18,GPIO.LOW)
             print (light_level)
 except KeyboardInterrupt:
     pass
