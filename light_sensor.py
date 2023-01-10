@@ -36,7 +36,11 @@ try:
         #print(rc_time(pin_to_circuit))
         if light_level < 20:
             print (light_level)
+            GPIO.output(16,GPIO.HIGH)
+            GPIO.output(18,GPIO.LOW)
         else:
+            GPIO.output(18,GPIO.HIGH)
+            GPIO.output(16,GPIO.LOW)
             print (light_level)
 except KeyboardInterrupt:
     pass
