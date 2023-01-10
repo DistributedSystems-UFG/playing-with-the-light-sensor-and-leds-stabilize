@@ -35,9 +35,9 @@ try:
         light_level = rc_time(pin_to_circuit)
         #print(rc_time(pin_to_circuit))
         if light_level < 20:
-            print ('Day')
+            print (light_level)
         else:
-            print ('Night')
+            print (light_level)
 except KeyboardInterrupt:
     pass
 finally:
